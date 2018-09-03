@@ -9,7 +9,7 @@ The documentation for Astro Forms, an iOS forms framework. Uses Vuepress docs.
 1.  Ensure vuepress is set up correctly (<https://vuepress.vuejs.org/>)
 2.  Run `vuepress build src` to build a static site
 3.  Commit any changes
-4.  Run `deploy.sh` to publish the static site.
+4.  Run `sh deploy.sh` to publish the static site.
 
 ## Testing
 1.  You can use any static server to test the built site locally
