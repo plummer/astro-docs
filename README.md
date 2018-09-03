@@ -1,4 +1,4 @@
-![Astro Forms: Documentation](https://github.com/plummer/astro-docs/assets/readme-header.jpg)
+![Astro Forms: Documentation](https://github.com/plummer/astro-docs/blob/master/assets/readme-header.jpg)
 
 The documentation for Astro Forms, an iOS forms framework. Uses Vuepress docs.
 
