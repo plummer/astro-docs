@@ -359,6 +359,38 @@ emailRow.focusRect = {
 
 Now when the email row `UITextField` is the `firstResponder`, both the emailRow and passwordRow will be visible above the keyboard.
 
+### Helpers
+
+A Helper is a reusable `UIView` that a Row manages that appears after the Row's `UIView` in a `UIStackView`. A clear use case for a Helper is error message views that need to show and hide on validation errors. The interface between a `Row` and a helper is the ability to show and hide the helper.
+
+This is done through two methods:
+
+```swift
+func showHelper<T: UIView>(
+	viewType: T.Type, 
+	animated: Bool, 
+	config: ((T) -> Void)?
+)
+
+func hideHelper(
+	animated: Bool = false, 
+	callback: (() -> Void)? = nil
+)
+```
+
+By example, showing an error using the example helper `ErrorView` is as simple as calling the show method, and configuring the view:
+
+```swift
+guard validate(row: row, ValidationRule.required) else {
+    row.showHelper(viewType: ErrorView.self, animated: true) { errorView in
+        errorView.label.text = "This field is required"
+    }
+    return
+}
+```
+
+The only unusual thing here is the use of the class type instead of an existing instance as a parameter when showing a helper. This is to avoid the need to store instances of helper views - Astro Forms will manage replacing the view if necessary, or reusing the existing view if it is of the same type.
+
 ## Validation
 
 Validation is handled by several instance methods available on `Form`, and does not enforce any particular architecture. 
@@ -452,3 +484,48 @@ let isValid: Bool = validate(
 )
 ```
 
+## Theming
+
+You can create themes in a type safe way easily in Astro Forms for any kind of property. Themes are defined on a form and inherited by views automatically, although any given instance of a row can override the theme to allow multiple themes to be used in the same form.
+
+Theming in Astro Forms can be used independently of forms too, you can apply the `Themeable` protocol you create to any `UIView`, simply by implementing the `theme` instance property and updating themes when you set it. If the given `UIView` is in a subview of any `Form`, it won't inherit a theme automatically so you will need to define it on each `UIView`. 
+
+Here an example `UIImageView` subclass that implements a different backgroundImage per theme in the Astro Forms example project:
+
+```swift
+class ThemeableImageView: UIImageView, Themeable {
+    
+    var theme: AstroTheme? {
+        didSet { updateTheme() }
+    }
+    
+    func updateTheme() { self.image = image(.formBackground) }
+    
+}
+```
+
+### Creating a Theme
+
+To create a theme, you need to create your own `Themeable` protocol, composed of various theming protocols that define themable behaviour (color, size) and also those that define how to apply the theme to your `UIView` subclasses (`Form` or `Row` views). These are constrained to concrete enumerated types implementing:
+- The number and names of the different themes in your project (for example: light, dark etc.)
+- The properties that should be applied within the themes (primaryColor, smallMarginSize etc.)
+
+This then exposes easy to use methods with a convenience syntax in any UIView that inherits your new protocol.
+
+#### Included Themable Protocols
+
+The color function is exposed by `ThemeableColorTraits`:
+```swift
+func color(_ requirement: ThemeColorType) -> UIColor
+```
+
+An example usage is: `textView.tintColor = color(.primaryTint)`,
+
+The image function is exposed by `ThemeableImageTraits`:
+```swift
+func image(_ requirement: ThemeImageType) -> UIImage
+```
+
+An example usage is: `imageView.image = image(.formBackground)`.
+
+In both these cases, a color and image will be returned for the currently active theme.

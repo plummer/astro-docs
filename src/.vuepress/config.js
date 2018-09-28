@@ -6,6 +6,7 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Docs', link: '/docs' },
       { text: 'Github', link: 'https://github.com/plummer/astro-forms' },
+      { text: 'Example Project', link: 'https://github.com/plummer/astro-forms/tree/master/Example' },
     ],
     sidebar: 'auto'
   }
