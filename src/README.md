@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://github.com/plummer/astro-docs/blob/master/assets/generic-splash.jpg
+heroImage: https://user-images.githubusercontent.com/580919/46216945-07dfb180-c384-11e8-88bf-f95d87cdf720.jpg
 actionText: Documentation →
 actionLink: /docs.html
 features:
