@@ -67,7 +67,7 @@ Tags are an important concept in Astro Forms:
 - Tags provide a unique ID for every `Row`
 - Tags can be dynamic using associated values
 - Every `Row` must have a tag
-- Every `Form` has an enum that declares it's set of row tags.
+- Every `Form` has an enum that declares its set of row tags.
 
 Create tags by implementing `RowTag` and `Equatable`. For example a set of tags might be:
 
@@ -87,7 +87,7 @@ Because every row has a tag you can access them later with the `findRow(tag:)` i
 let fullNameRow: TextFieldRow? = self.findRow(tag: LoginFormTag.fullName)
 ```
 
-If rows are rendered dynamically, associated types provide a convenient way to declare tags for rows that may be generated base on conditions.
+If rows are rendered dynamically, associated types provide a convenient way to declare tags for rows that may be generated based on conditions.
 
 ```swift
 enum LoginFormTag: RowTag, Equatable {
@@ -403,7 +403,7 @@ There are several validation methods available on a form for validating input, w
 
 ### Basic Validation
 
-The simplest kind of validation takes a variadic parameter of blocks that return boolean values. If all the blocks return true, then the result is true. Each block is passed the row value as it's parameter.
+The simplest kind of validation takes a variadic parameter of blocks that return boolean values. If all the blocks return true, then the result is true. Each block is passed the row value as its parameter.
 
 ```swift
    func validate<R: ValueRow>(
