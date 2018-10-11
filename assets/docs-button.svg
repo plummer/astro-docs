@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="194px" height="20px" viewBox="0 0 194 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3,0 L189,0 C190.656854,-3.04359188e-16 192,1.34314575 192,3 L192,15 C192,16.6568542 190.656854,18 189,18 L3,18 C1.34314575,18 2.02906125e-16,16.6568542 0,15 L0,3 C-2.02906125e-16,1.34314575 1.34314575,-5.83819232e-16 3,-8.8817842e-16 Z" id="path-1"></path>
+        <linearGradient x1="100%" y1="59.2374153%" x2="0%" y2="11.2540409%" id="linearGradient-3">
+            <stop stop-color="#1A1A5F" offset="0%"></stop>
+            <stop stop-color="#2C275E" offset="37.7664379%"></stop>
+            <stop stop-color="#3C2872" offset="69.3980311%"></stop>
+            <stop stop-color="#6A2BB0" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="6.02245809%" cy="32.8811756%" fx="6.02245809%" fy="32.8811756%" r="314.78445%" gradientTransform="translate(0.060225,0.328812),scale(0.299311,1.000000),rotate(8.715812),translate(-0.060225,-0.328812)" id="radialGradient-4">
+            <stop stop-color="#EA4CB1" stop-opacity="0" offset="0.0699963873%"></stop>
+            <stop stop-color="#4225FF" offset="100%"></stop>
+        </radialGradient>
+        <path d="M8.10321469,3.42857143 L5.71827401,0.975489589 C5.50131607,0.752332851 5.50131607,0.390524292 5.71827401,0.167367554 C5.93523195,-0.0557891845 6.28699027,-0.0557891845 6.50394821,0.167367554 L9.83728155,3.59593898 C10.0542395,3.81909572 10.0542395,4.18090428 9.83728155,4.40406102 L6.50394821,7.83263245 C6.28699027,8.05578918 5.93523195,8.05578918 5.71827401,7.83263245 C5.50131607,7.60947571 5.50131607,7.24766715 5.71827401,7.02451041 L8.10321469,4.57142857 L0.555555556,4.57142857 C0.248730695,4.57142857 0,4.31559129 0,4 C0,3.68440871 0.248730695,3.42857143 0.555555556,3.42857143 L8.10321469,3.42857143 Z" id="path-5"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-16.000000, -6.000000)">
+            <g id="Group-2" transform="translate(17.000000, 6.000000)">
+                <g id="Group" transform="translate(0.000000, 1.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <path stroke="#492F5C" d="M3,-0.5 L189,-0.5 C190.932997,-0.5 192.5,1.06700338 192.5,3 L192.5,15 C192.5,16.9329966 190.932997,18.5 189,18.5 L3,18.5 C1.06700338,18.5 -0.5,16.9329966 -0.5,15 L-0.5,3 C-0.5,1.06700338 1.06700338,-0.5 3,-0.5 Z"></path>
+                    <g mask="url(#mask-2)" fill-rule="nonzero" id="Rectangle" stroke="#979797">
+                        <g transform="translate(-15.000000, -23.000000)">
+                            <path d="M0.5,0.5 L0.5,93.1842105 L312.5,93.1842105 L312.5,0.5 L0.5,0.5 Z" fill="url(#linearGradient-3)"></path>
+                            <path d="M0.5,0.5 L0.5,93.1842105 L312.5,93.1842105 L312.5,0.5 L0.5,0.5 Z" fill="url(#radialGradient-4)" opacity="0.418024554"></path>
+                        </g>
+                    </g>
+                </g>
+                <path d="M173,0 L190,0 C191.656854,1.01453063e-16 193,1.34314575 193,3 L193,17 C193,18.6568542 191.656854,20 190,20 L173,20 L173,0 Z" id="Shape" fill="#731FC8" fill-rule="nonzero"></path>
+                <text id="Astro-Forms-Document" font-family="Effra-Bold, Effra" font-size="13" font-weight="bold" letter-spacing="-0.1850695" fill="#FFFFFF">
+                    <tspan x="5.88036875" y="14">Astro Forms Documentation</tspan>
+                </text>
+                <g id="arrow-right" transform="translate(177.000000, 6.000000)">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <use id="Combined-Shape" stroke="#FFFFFF" stroke-width="0.5" fill="#000000" fill-rule="nonzero" xlink:href="#path-5"></use>
+                    <g id="COLOR/-white" mask="url(#mask-6)" fill="#FFFFFF">
+                        <g transform="translate(-2.000000, -3.000000)" id="Rectangle">
+                            <rect x="0" y="0" width="13" height="14"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
